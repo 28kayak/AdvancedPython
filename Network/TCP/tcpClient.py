@@ -7,12 +7,12 @@ import socket
 def mainf():
     localhost = '127.0.0.1'
     #host = '172.31.23.155'
-    host = socket.gethostname()
+    host = socket.gethostname(socket.AF_INET, socket.SOCK_STREAM)
     print("Host Name: " + str(host))
     port = 5000
 
     s = socket.socket()
-    print("Server is connecting....")
+    print("Connecting to the server.......")
     s.connect((host, port))
     print("Server is connected")
     message = input("Enter message: ")

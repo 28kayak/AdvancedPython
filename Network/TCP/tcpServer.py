@@ -11,7 +11,7 @@ def mainf():
     port = 5000
     numOfsocket = 1  # number of socket to be listened
 
-    s = socket.socket()  # create socket instance
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # create socket instance
     s.bind((host, port))
     print("Server is now listening....")
     s.listen(numOfsocket)
