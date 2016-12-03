@@ -5,13 +5,13 @@ import socket
 
 
 def mainf():
+    s = socket.socket() # create socket instance
     localhost = '127.0.0.1'
     #host = '172.31.23.155'
     host = socket.gethostname(socket.AF_INET, socket.SOCK_STREAM)
     print("Host Name: " + str(host))
     port = 5000
 
-    s = socket.socket()
     print("Connecting to the server.......")
     s.connect((host, port))
     print("Server is connected")

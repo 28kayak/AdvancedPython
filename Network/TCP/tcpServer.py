@@ -4,6 +4,7 @@ import socket
 
 
 def mainf():
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # create socket instance
     localhost = '127.0.0.1'  # localhost
     #host = "172.31.23.155"
     host = socket.gethostname()
@@ -11,7 +12,7 @@ def mainf():
     port = 5000
     numOfsocket = 1  # number of socket to be listened
 
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # create socket instance
+
     s.bind((host, port))
     print("Server is now listening....")
     s.listen(numOfsocket)
