@@ -4,13 +4,14 @@ import socket
 
 
 def mainf():
-    host = '127.0.0.1'  # localhost
+    localhost = '127.0.0.1'  # localhost
+    host = "172.31.23.155"
     port = 5000
     numOfsocket = 1  # number of socket to be listened
 
     s = socket.socket()  # create socket instance
     s.bind((host, port))
-
+    print("Server is now listening....")
     s.listen(numOfsocket)
     c, addr = s.accept()
 

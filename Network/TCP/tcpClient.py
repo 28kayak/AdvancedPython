@@ -5,12 +5,14 @@ import socket
 
 
 def mainf():
-    host = '127.0.0.1'
+    localhost = '127.0.0.1'
+    host = '172.31.23.155'
     port = 5000
 
     s = socket.socket()
+    print("Server is connecting....")
     s.connect((host, port))
-
+    print("Server is connected")
     message = input("Enter message: ")
     while message != 'q':
         #print(message.encode())
