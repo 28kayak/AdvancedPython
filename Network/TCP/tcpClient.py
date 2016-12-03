@@ -6,7 +6,9 @@ import socket
 
 def mainf():
     localhost = '127.0.0.1'
-    host = '172.31.23.155'
+    #host = '172.31.23.155'
+    host = socket.gethostname()
+    print("Host Name: " + str(host))
     port = 5000
 
     s = socket.socket()
