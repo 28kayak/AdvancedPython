@@ -16,7 +16,7 @@ It is used for:
 
 
 
-
+Go on a terminal for a server-side:
 ```sh
 $ python3 tcpServer.py
 ```
